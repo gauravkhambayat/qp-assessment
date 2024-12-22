@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "ee4d648f-5e5f-41ca-8e18-dbd3c0c6516e",
+		"name": "Grocery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31848172"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "add grocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXVyYXYxIiwiaWQiOiI2NzRkN2U4Ny1kNDllLTRmY2UtOTU1Ni1hOTU1OTAzZGQ3MGEiLCJpYXQiOjE3MzQ4NjUxMjYsImV4cCI6MTczNDkwMTEyNn0.dm-TalafeaAo1OZMA-etqvmnT-caB7gqSgVgesKhk_4181GYfmAyJOCeK6b30wDVvTW5CIwrefXzLrvbOiLYKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mango\",\r\n    \"price\":400.00,\r\n    \"inventory\":15,\r\n    \"description\": \"fruits\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/groceries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"groceries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all groceries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/groceries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"groceries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update grocery by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXVyYXYxIiwiaWQiOiI2NzRkN2U4Ny1kNDllLTRmY2UtOTU1Ni1hOTU1OTAzZGQ3MGEiLCJpYXQiOjE3MzQ4NjUxMjYsImV4cCI6MTczNDkwMTEyNn0.dm-TalafeaAo1OZMA-etqvmnT-caB7gqSgVgesKhk_4181GYfmAyJOCeK6b30wDVvTW5CIwrefXzLrvbOiLYKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"name\": \"Mango\",\r\n    \"price\": 500.0,\r\n    \"inventory\": 15,\r\n    \"description\": \"fruits\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/groceries/0acce4e6-e57e-47c3-9ca2-98ae16b78b43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"groceries",
+								"0acce4e6-e57e-47c3-9ca2-98ae16b78b43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update inventory by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXVyYXYxIiwiaWQiOiI2NzRkN2U4Ny1kNDllLTRmY2UtOTU1Ni1hOTU1OTAzZGQ3MGEiLCJpYXQiOjE3MzQ4NjUxMjYsImV4cCI6MTczNDkwMTEyNn0.dm-TalafeaAo1OZMA-etqvmnT-caB7gqSgVgesKhk_4181GYfmAyJOCeK6b30wDVvTW5CIwrefXzLrvbOiLYKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inventory\":25\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/groceries/0acce4e6-e57e-47c3-9ca2-98ae16b78b43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"groceries",
+								"0acce4e6-e57e-47c3-9ca2-98ae16b78b43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete grocery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXVyYXYxIiwiaWQiOiI2NzRkN2U4Ny1kNDllLTRmY2UtOTU1Ni1hOTU1OTAzZGQ3MGEiLCJpYXQiOjE3MzQ4NjUxMjYsImV4cCI6MTczNDkwMTEyNn0.dm-TalafeaAo1OZMA-etqvmnT-caB7gqSgVgesKhk_4181GYfmAyJOCeK6b30wDVvTW5CIwrefXzLrvbOiLYKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/groceries/0acce4e6-e57e-47c3-9ca2-98ae16b78b43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"groceries",
+								"0acce4e6-e57e-47c3-9ca2-98ae16b78b43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user fetch grocery list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXVyYXYyIiwiaWQiOiJlZTEyNzZjNC1iN2U4LTRiNTEtOGE3Ni1hMGM4Y2QzNWZmOGYiLCJpYXQiOjE3MzQ4NjgzNDcsImV4cCI6MTczNDkwNDM0N30.EPRMgjuLkq_8W-ldcdUsbB6iPqWEvzrazS_F_n1uITvW7R_ExzsbZrBmtxXy6uuYeKaOpJjh68E4Ah7VHJqTbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/groceries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"groceries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXVyYXYyIiwiaWQiOiJlZTEyNzZjNC1iN2U4LTRiNTEtOGE3Ni1hMGM4Y2QzNWZmOGYiLCJpYXQiOjE3MzQ4NjgzNDcsImV4cCI6MTczNDkwNDM0N30.EPRMgjuLkq_8W-ldcdUsbB6iPqWEvzrazS_F_n1uITvW7R_ExzsbZrBmtxXy6uuYeKaOpJjh68E4Ah7VHJqTbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"itemId\": \"b7944dec-11c4-47be-9936-de8d43f7ea3c\",\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"itemId\": \"e7cf0fb1-9c17-4819-baac-8117d6a0f88d\",\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "add admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"gaurav1\",\r\n    \"password\":\"123456789\",\r\n    \"role\":\"ROLE_ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"gaurav3\",\r\n    \"password\":\"123456789\",\r\n    \"role\":\"ROLE_USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"gaurav1\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"gaurav2\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
