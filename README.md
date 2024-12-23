@@ -25,22 +25,22 @@ The Grocery Management Application is a RESTful Spring Boot application that all
 ## Installation & Setup
 1. Clone the Repository:
 
-        `git clone https://github.com/gauravkhambayat/qp-assessment.git` <br>
-        `cd qp-assessment`
+        git clone https://github.com/gauravkhambayat/qp-assessment.git 
+        cd qp-assessment
 
 2. Configure Database: Update the `application.properties` file with your PostgreSQL credentials :
 
-        `spring.datasource.url=jdbc:postgresql://localhost:5432/grocery //your database name instead grocery`
-        `spring.datasource.username=your_username`
-        `spring.datasource.password=your_password`
+        spring.datasource.url=jdbc:postgresql://localhost:5432/grocery //your database name instead grocery
+        spring.datasource.username=your_username
+        spring.datasource.password=your_password
 
 3. Build the Application:
    
-        `mvn clean install`
+        mvn clean install
 
 4. Run the Application:
 
-        `mvn spring-boot:run`
+        mvn spring-boot:run
 
 4. Access the Application:
 
